@@ -1,0 +1,357 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/*[Overflow]
+  It specifies what should happen if content overflows an element's box.
+  Note: The overflow property only works for block elements with a specified height.
+
+  [Properties]
+  > Visible	- the overflow is not clipped. It shows outside the element's box. (default)	
+  > Hidden	- the overflow is clipped, and the rest of the content will be invisible. Content can be scrolled programmatically (e.g. by setting scrollLeft or scrollTo())	
+  > Clip -	the overflow is clipped, and the rest of the content will be invisible. Forbids scrolling, including programmatic scrolling.	
+  > Scroll -	the overflow is clipped, but a scroll-bar is added to see the rest of the content	
+  > Auto -	if overflow is clipped, a scroll-bar should be added to see the rest of the content	
+*/
+
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/*[Display: Flex (Flexbox)]
+  To start using the Flexbox model, you need to first define a flex container. A flexbox model aims at providing a more efficient way to lay out, 
+  align and distribute space among items in a container, even when their size is unknown and/or dynamic.
+
+  // A flex container expands items to fill available free space or shrinks them to prevent overflow. Most importantly, 
+  the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based).
+
+  // Note: Flexbox layout is most appropriate to the components of an application or small-scale layouts, while Grid layout is intended for larger scale layouts.
+*/
+
+.logo {
+  width : 150px; 
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+/*[Margin and its diff sets of values]
+  // If the margin property has 4 values: {margin: 10px 5px 15px 20px;}
+    top margin is 10px
+    right margin is 5px
+    bottom margin is 15px
+    left margin is 20px
+
+  // If the margin property has three values: margin: {10px 5px 15px;}
+    top margin is 10px
+    right and left margins are 5px
+    bottom margin is 15px
+
+  // If the margin property has two values: {margin: 10px 5px;}
+    top and bottom margins are 10px
+    right and left margins are 5px
+
+  // If the margin property has one value: {margin: 10px;}
+    all four margins are 10px
+*/
+
+.menuIcon {
+  width: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 60px;
+}
+
+/*[Display: In-Line Block]
+  > Compared to {display: inline}, the difference is that {display: inline-block} allows to set a width and height on the element, 
+    and the top and bottom margins/paddings of in-line block element are respected.
+
+  > Compared to {display: block}, the difference is that {display: inline-block} does not add a line-break after the element, 
+    so the element can sit next to other elements, side by side.
+*/
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(49, 8, 79);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: rgb(122, 10, 201);
+  font-size: 18.2px;
+  text-decoration: underline;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px 0px;
+}
+
+.col1 {
+  flex-basis: 40%;
+  position: relative;
+  margin-left: 50px;
+}
+
+/*[Flex-basis]
+  //It sets the initial length/width if a flex item (similar min-width)
+
+  //The difference is that when it shrink, min-width will stop at its value and will have to scroll to see the content,
+    BUT flex-basis will keep on shrinking but (maintainging its ratio)
+*/
+
+.col1 h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.col1 h3 {
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 8px;
+  color: rgb(60, 60, 93);
+}
+
+.col1 h3:hover {
+  font-size: 29.7px;
+  color: rgb(13, 115, 170);
+  cursor: pointer;
+}
+
+.col1 p {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.col1 h4 {
+  font-size: 20px;
+  margin: 20px 0px;
+  margin-bottom: 35px;
+}
+
+button {
+  width: 140px; border: 0; padding: 12px 10px;
+  outline: none; color: aliceblue;
+  background: linear-gradient(to right, #d532e1, rgb(211, 140, 101));
+  border-radius: 7px; cursor: pointer;
+  transition: width 0.5s;
+  box-sizing: border-box;
+}
+
+.buttonimg {
+  width: 20px;
+  height: 17px;
+  display: none;
+}
+
+button:hover img {
+  display: block;
+}
+
+button:hover {
+  width: 180px;
+  display: flex; align-items: center; justify-content: space-around;
+  background: linear-gradient(to right, #d532e1, rgb(233, 111, 58));
+}
+
+.col2 {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+}
+
+.col2, .shoeimg {
+  width: 80%;
+}
+
+.shoeimg{
+  transition: transform 0.5s;
+}
+
+.shoeimg:hover {
+  transform: rotate(-20deg);
+}
+
+.colorbox {
+  position: absolute;
+  right: 20;
+  top: 15;
+  background: linear-gradient(rgb(192, 192, 236),rgb(249, 163, 224));
+  border-radius: 20px 0 0 20px;
+  height: 150%;
+  width: 100%;
+  z-index: -1;
+  transform: translateX(150px);
+}
+
+.sociallinks img{
+  height: 30px;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.sociallinks {
+  text-align: center;
+}
+
+
+@media only screen and (max-width:700px) {
+  
+  .logo {
+    width : 100px; 
+    cursor: pointer;
+    margin: 10px 0;
+  }
+
+  nav ul {
+    width: 100%;
+    background:linear-gradient(rgb(192, 192, 236),rgb(249, 163, 224));
+    position: absolute;
+    top: 97px;
+    right:0;
+    z-index: 2;
+    box-sizing: border-box;
+  }
+
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a:hover {
+    color: rgb(122, 10, 201);
+    font-size: 16.5px;
+    text-decoration: underline;
+  }
+
+  nav ul li a {
+   color: rgb(38, 0, 73);
+   font-size: 16px;
+   font-weight: 400;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  #menulist {
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .row {
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+
+  .col2 {
+    position: relative;
+    display: flex;
+    flex-basis: 60%;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0px;
+  }
+
+  .col1 {
+    flex-basis: 60%;
+    position: relative;
+  }
+
+  .col1 h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-left: -35px;
+  }
+
+  
+.col1 h3 {
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 8px;
+  color: rgb(60, 60, 93);
+  margin-left: -35px;
+}
+
+.col1 p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  margin-left: -35px;
+}
+
+.col1 h4 {
+  font-size: 20px;
+  margin: 20px 0px;
+  margin-bottom: 20px;
+  margin-left: -35px;
+}
+
+button {
+  width: 140px; border: 0; padding: 12px 10px;
+  outline: none; color: aliceblue;
+  background: linear-gradient(to right, #d532e1, rgb(211, 140, 101));
+  border-radius: 7px; cursor: pointer;
+  transition: width 0.5s;
+  box-sizing: border-box;
+  margin-left: -35px;
+}
+
+.buttonimg {
+  width: 20px;
+  height: 17px;
+  display: none;
+}
+
+.col1 h3:hover {
+  font-size: 19.7px;
+  color: rgb(13, 115, 170);
+  cursor: pointer;
+}
+
+.colorbox {
+  position: absolute;
+  right: 50;
+  top: 15;
+  background: linear-gradient(rgb(192, 192, 236),rgb(249, 163, 224));
+  border-radius: 30px 0 0 20px;
+  height: 150%;
+  width: 180%;
+  z-index: -1;
+  transform: translateX(100px);
+}
+
+}

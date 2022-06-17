@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Part 1-Nike Shoe Website</title>
+  <link rel="stylesheet" href="part1.css">
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <div class="navbar">
+      <img class="logo" src="pictures/pngwing.com.png">
+
+      <nav>
+        <ul id="menulist">
+          <li><a href="">Home</a></li>
+          <li><a href="">Store</a></li>
+          <li><a href="">Service</a></li>
+          <li><a href="">About Us</a></li>
+        </ul>
+      </nav>
+
+      <img class="menuIcon" src="pictures/menu-png-icon-3.jpg" onclick = "togglemenu()">
+    </div>
+
+    <div class="row">
+      <div class="col1">
+        <h2>Nike Men Shoes<br>SkyBlue N21 Series</h2>
+        <h3>View Product Details</h3>
+        <p>Hundreds of Boost capsules fused together and <br> ready to explode with energy in each step.</p>
+        <h4>$62.59</h4>
+        <button type="button">Order Now<img class="buttonimg" src="pictures/PngItem_5216062.png"></button>
+      </div>
+
+      <div class="col2">
+        <img class="shoeimg" src="pictures/shoe-removebg-preview.png">
+        <div class="colorbox"></div>
+      </div>
+    </div>
+
+    <div class="sociallinks">
+      <img src="pictures/PngItem_2781861.png">
+      <img src="pictures/Screenshot_2022-04-02_170552-removebg-preview.png">
+      <img src="pictures/Screenshot_2022-04-02_170250-removebg-preview (1).png">
+      
+    </div>
+ 
+  </div>
+  
+  <script>
+    var menulist = document.getElementById("menulist");
+
+    menulist.style.maxHeight = "0px";
+
+    function togglemenu() {
+      if(menulist.style.maxHeight < "20px") {
+        menulist.style.maxHeight = "130px";
+      }
+      else {
+        return menulist.style.maxHeight = "0px";
+      }
+  
+    }
+
+  </script>
+
+
+</body>
+
+
+</html>
+
